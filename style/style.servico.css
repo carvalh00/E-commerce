@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+:root { /* ID para definição das cores*/
+    --primary: #000000;
+    --secondary: #ffffff;
+    --terciary: #eae2b7;    
+    --quaternary: #666666;
+    --fundo1: #f3f3f3;
+    --fundo2: #ffffff;
+    --titulo: #fcbf49;
+    --botao: #d62828;
+    --caixas: #f77f00;
+    --Quinary: #003049;
+}
+
+* {
+margin: 0;
+padding: 0;
+font-family: 'Noto Sans', sans-serif;
+box-sizing: border-box;
+}
+
+h2 {
+    color: var(--caixas);
+    text-transform: uppercase;
+}
+
+body {
+    flex-wrap: wrap;
+    display: flex;
+    flex: 1 1 100vw;
+}
+
+header, nav, main, footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--fundo1);
+}
+
+header {
+    display: flex;
+    flex: 1 1 100vw;
+    background: var(--caixas); 
+    width: 100vw;
+    position: fixed;
+    box-shadow: 0px 0px 5px var(--primary);
+}
+
+#logo {
+    flex: 0 0 120px;
+    height: 120px;
+    filter: drop-shadow(0px 0px 4px black);
+}
+
+nav {
+    background: var(--caixas);
+    display: flex;
+    flex: 1 1 100px;
+    height: 80px;
+    justify-content: flex-end;
+}
+
+nav a {
+    margin: 3%;
+    font-size: 16pt;
+    text-decoration: none;
+    color: var(--titulo);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.navigation:hover {
+    color: var(--botao);
+    text-shadow: 0px 1px 1px var(--primary);
+    transform: scale(1.2);
+}
+
+main {    
+    flex: 20 1 500px;
+    display: inline;
+    height: auto;
+    background: var(--fundo2);
+}
+
+footer {
+    display: flex;
+    flex: 1 1 100vw;    
+}
+
+.contato {
+    background: var(--caixas);
+    font-size: 15px;
+}
+
+.direitos-de-uso {
+    font-size: 12px;
+}
+
+.class-identica {
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    color: var(--secondary);
+    margin: 30px;
+}
+
+.rede-social {
+    margin: 5px;
+}
+
+.rede-social img {
+    transition: filter 0.3s ease;
+}
+
+.rede-social:hover img {
+    filter: drop-shadow(0px 0px 1px black);
+    transform: scale(1.2);
+    animation: rotateImage 0.3s linear;
+}
+
+@keyframes rotateImage {
+    0% {
+        transform: rotateY(0deg);
+    }
+    25% {
+        transform: rotateY(180deg);
+    }
+    50% {
+        transform: rotateY(360deg);
+    }
+    75% {
+        transform: rotateY(540deg);
+    }
+    100% {
+        transform: rotateY(720deg);
+    }
+}
+
+hr {
+    margin: 20px auto;
+}
+
+.class-individual{    
+    color: var(--quaternary);
+    width: 70vw;
+    text-align: center;
+}
+
+/****************** CONTEUDO QUE DIFERENCIA AS PAGINAS *****************/
+
+.container-servicos {
+    margin-top: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 1px var(--primary);
+    color: var(--botao);
+}
+
+.conteiner1, .conteiner2, .conteiner3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin: 30px;
+    padding: 33px;
+    background: var(--fundo1);
+    border-radius: 5px;
+}
+
+.conteiner2 img, .conteiner3 img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid var(--terciary);
+}
+
+
+
+@media screen and (max-width: 1055px) {
+    main{
+        height: calc(100vh - 260px);
+    }
+    
+    aside{
+        flex:  1 1 100vw;
+        height: 100px;
+        opacity: 1;
+    }
+    nav{
+        flex:  1 1 100vw;
+        height: 100px;
+    }
+}

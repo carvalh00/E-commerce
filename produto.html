@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.produto.css">
+    <link rel="icon" href="./logo/logomarca.png" type="image/png">
+    <title>Produtos</title>
+</head>
+<body>
+    <header>
+        <img src="./logo/logomarca.png" id="logo" alt="logomarca">
+        <nav id="menu">
+            <input type="text" id="searchInput" placeholder="Buscar produtos" onkeyup="filterProducts()">
+            <a class="navigation" href="./home.html">home</a>
+            <a class="navigation" href="./produto.html">produtos</a>
+            <a class="navigation" href="./serviços.html">serviços</a>
+            <a class="navigation" href="./sobre.html">sobre</a>
+        </nav>
+    </header>
+    <main>
+        <div class="titulo-produto">
+            <h1>Produtos</h1>
+        </div>                 
+        <section class="grid-container-prod" id="container-produto">
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/sache-pedigree-dog.png" alt="Sache Dog">
+                    <figcaption>
+                        <p>PEDIGREE® Sachê Adulto - Sabor Frango ao Molho 100g</p>
+                        <p class="value">R$29.90</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/racao-pedigree-dog.png" alt="Ração Dog">
+                    <figcaption>
+                        <p>PEDIGREE® Ração Cães Adulto - Sabor Carne, Frango e Cereais 10kg</p>
+                        <p class="value">R$159.90</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/sache-whiskas-cat.png" alt="Sache Cat">
+                    <figcaption>
+                        <p>WHISKAS® Sachê Adulto - Sabor Carne ao Molho 85g</p>
+                        <p class="value">R$6.00</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/racao-whiskas-cat.png" alt="Ração Cat">
+                    <figcaption>
+                        <p>WHISKAS® Ração Gatos Adulto - Sabor Frango e Leite 3kg</p>
+                        <p class="value">R$49.90</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/brinquedo-cabo-dog.png" alt="Brinquedo Mordedor Dog">
+                    <figcaption>
+                        <p>Brinquedo para Cães - Corda Resistente Cabo de Guerra</p>
+                        <p class="value">R$29.90</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/briquedo-bolinha-dog.png" alt="Brinquedo Bolinha Dog">
+                    <figcaption>
+                        <p>Brinquedo para Cães - Bolinha de Borracha Resistente</p>
+                        <p class="value">R$29.90</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/brinquedo-1-cat.png" alt="Brinquedo Arranhador Cat">
+                    <figcaption>
+                        <p>Brinquedo para Gatos - Arranhador Para Gatos Com Banco e Brinquedos</p>
+                        <p class="value">R$29.90</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/brinquedo-espiral-cat.png" alt="Brinquedo Espiral Cat">
+                    <figcaption>
+                        <p>Brinquedo para Gatos - Espiral de Bolinhas para Gato Corre</p>
+                        <p class="value">R$24.90</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/mordedor-bovino-dog.png" alt="mordedor Bovino Dog">
+                    <figcaption>
+                        <p>Petisco Para Cães - Osso Fêmur Bovino Defumado</p>
+                        <p class="value">R$32.90</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/rasqueadeira-cat-dog.png" alt="Rasqueadeira Cat&Dog">
+                    <figcaption>
+                        <p>Rasqueadeira Removedor de Pelos - Gato & Cão</p>
+                        <p class="value">R$26.90</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/guia-dog.png" alt="Guia Dog">
+                    <figcaption>
+                        <p>Guia para Cães de Médio e Grande Porte 1M X 16mm</p>
+                        <p class="value">R$23.90</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/cama-cat-dog.png" alt="Cama Dog">
+                    <figcaption>
+                        <p>Caminha Nuvem Pet Redonda para Cachorros</p>
+                        <p class="value">R$85.00</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/caixa-areia-cat.png" alt="Caixinha de Areia Cat">
+                    <figcaption>
+                        <p>Caixa de Areia para Gato - Bandeja Higiênica</p>
+                        <p class="value">R$19.00</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/coleira-rastreador-cat.png" alt="Coleira Tag Cat">
+                    <figcaption>
+                        <p>Coleira Capa Fixa com Tag GPS para Gato</p>
+                        <p class="value">R$24.99</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/kit-shampoo-e-condicionador-dog.png" alt="Kit Dog">
+                    <figcaption>
+                        <p>Shampoo para Cachorro Antipulga + Condicionador Revita Sanol</p>
+                        <p class="value">R$50.00</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="card">
+                <figure>
+                    <img src="./image/produtos/shampoo-e-condicionador-cat.png" alt="Shampoo Cat">
+                    <figcaption>
+                        <p>Shampoo e Condicionador Pet Clean 700 Ml para Gatos</p>
+                        <p class="value">R$13.90</p>
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+    </main>
+    <footer class="contato">
+        <div class="class-identica">
+            <div>
+                <h3>Horário de funcionamento</h3>
+                <p>De segunda à sexta-feira das 08h às 18h<br>Sábado das 08h às 13h</p>
+            </div>
+            <div>
+                <h3>Endereço</h3>
+                <p>Rua das Flores, 123 – Bairro Jardim das Palmeiras<br>Florianópolis – Santa Catarina</p>
+            </div>
+            <div>
+                <h3>Nossas Redes Sociais</h3>
+                <a class="rede-social" href="https://x.com" target="_blank" rel="noopener noreferrer"><img src="./logo/rede-sociais/twitter.png" alt="twitter"></a>
+                <a class="rede-social" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="./logo/rede-sociais/instagram.png" alt="instagram"></a>
+                <a class="rede-social" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="./logo/rede-sociais/facebook.png" alt="facebook"></a>
+                <a class="rede-social" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="./logo/rede-sociais/youtube.png" alt="youtube"></a>
+            </div>
+        </div>        
+    </footer>
+    <footer class="direitos-de-uso">
+        <div class="class-identica">
+            <div class="class-individual">
+                <div>
+                <h2>formas de pagamento</h2>
+                <img src="./image/payment.webp" alt="logomarca">
+                <hr>
+                <p>CNPJ 09.569.483/0001-14. E-mail: sac.ecommerce@caomiapetshop.com.br. Imagens meramente ilustrativas.</p>
+                <p>Copyright © 2024 CãoMia Pet Shop – Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./script/filter.produto.js"></script>
+</body>
+</html>
