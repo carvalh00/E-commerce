@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style.sobre.css">
     <link rel="icon" href="./logo/logomarca.png" type="image/png">
     <title>Sobre</title>
 </head>
@@ -17,15 +17,77 @@
             <a class="navigation" href="./sobre.html">sobre</a>
         </nav>
     </header>
-
-
-
     <main>
-        sobre
+        <div class="container-sobre">
+            <h1>sobre nós</h1>
+        </div>
+        <section class="card-sobre">
+            <div>
+                <h2>Nossa História: CãoMia Pet Shop</h2>
+                <p>
+                    Tudo começou há oito anos, em uma pequena casa na cidade de Florianópolis. A paixão pelos animais de estimação sempre fez parte da vida de Thaianny e Wesley, um casal dedicado ao cuidado e bem-estar de cães e gatos. Com um amor incondicional pelos pets e uma visão empreendedora, eles decidiram transformar essa paixão em um negócio.
+                    <br><br>
+                    Thaianny, com sua experiência em veterinária, e Wesley, um entusiasta por inovação, começaram a oferecer produtos e serviços para pets a partir da garagem de sua casa. Inicialmente, o foco era apenas em ração de alta qualidade e alguns brinquedos feitos à mão. O boca a boca se espalhou rapidamente entre amigos, vizinhos e a comunidade local, que passaram a confiar na expertise e no carinho que eles dedicavam a cada pet.
+                    <br><br>
+                    À medida que a demanda crescia, Thaianny e Wesley perceberam a necessidade de expandir. Com muito trabalho e dedicação, abriram oficialmente o CãoMia Pet Shop há dois anos. A loja física, localizada no coração de Florianópolis, tornou-se um ponto de referência para donos de cães e gatos que buscavam não apenas produtos de qualidade, mas também um atendimento personalizado e um ambiente acolhedor.
+                    <br><br>
+                    Hoje, o CãoMia Pet Shop é conhecido por sua ampla variedade de produtos, que incluem ração premium, petiscos saudáveis, brinquedos inovadores, acessórios estilosos e itens de higiene de alta qualidade. Além disso, a loja oferece serviços essenciais como banho e tosa, atendimento veterinário e adestramento.
+                    <br><br>
+                    O compromisso com a excelência e o amor pelos animais são os pilares que sustentam o CãoMia Pet Shop. Thaianny e Wesley, juntamente com uma equipe apaixonada e dedicada, continuam a inovar e a expandir, sempre com o objetivo de proporcionar o melhor para os seus amigos de quatro patas.
+                    <br><br>
+                    Venha nos visitar e faça parte da nossa história. No CãoMia Pet Shop, seu pet é tratado como parte da família.
+                </p>
+            </div>
+            <div class="card-local">
+                <h2>Nossa Localização</h2>
+                <iframe id="map"                 
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d459.35273411762887!2d-48.55172941267228!3d-27.593523784678375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sestacio%20de%20florianopolis!5e0!3m2!1spt-BR!2sbr!4v1718129705653!5m2!1spt-BR!2sbr">
+                </iframe>
+            </div>
+        </section>
+        <section class="conteiner-card">
+            <div class="envio-formulario">
+                <h1>entre em contato conosco</h1>
+                <form id="contato-form">
+                    <div class="card-form">
+                        <label for="nome-completo">Nome Completo</label>
+                        <input type="text" name="nome-completo" placeholder="Nome Completo" size="30" minlength="5" maxlength="45" id="F-nome-completo">
+                        <label for="telefone">Contato</label>
+                        <input type="text" name="telefone" placeholder="Telefone/Celular" maxlength="14" oninput="FormatarContato(this)" id="F-telefone">    
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" placeholder="E-mail" id="F-email">    
+                        <label for="pet">Seu Pet</label>
+                        <select name="pet" id="F-pet" onchange="selecaoRaca()">
+                            <option value="">Selecione</option>
+                            <option value="cao">Cão</option>
+                            <option value="gato">Gato</option>
+                        </select>
+                        <label for="raca">Raça</label>
+                        <select name="raca" id="F-raca">
+                            <option value="">Selecione uma raça</option>
+                        </select>
+                        <label for="sexo">Sexo</label>
+                        <div id="sexo">
+                            <input type="radio" name="F-sexo" value="macho" id="sexo-macho">
+                            <label for="sexo-macho">Macho</label>
+                            <input type="radio" name="F-sexo" value="femea" id="sexo-femea">
+                            <label for="sexo-femea">Fêmea</label>
+                        </div>
+                        <label for="idade-pet">Faixa Etária</label>
+                        <select name="idade-pet" id="F-idade-pet">
+                            <option value="">Selecione</option>
+                            <option value="filhote">Filhote</option>
+                            <option value="jovem">Jovem</option>
+                            <option value="adulto">Adulto</option>
+                            <option value="idoso">Idoso</option>
+                        </select>
+                    </div>
+                    <div id="error-message" class="error"></div>
+                    <button class="btn-formulario" type="submit">enviar</button>
+                </form>
+            </div>
+        </section>
     </main>
-
-
-
     <footer class="contato">
         <div class="class-identica">
             <div>
@@ -43,19 +105,39 @@
                 <a class="rede-social" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="./logo/rede-sociais/facebook.png" alt="facebook"></a>
                 <a class="rede-social" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="./logo/rede-sociais/youtube.png" alt="youtube"></a>
             </div>
-        </div>        
+        </div>
     </footer>
     <footer class="direitos-de-uso">
         <div class="class-identica">
             <div class="class-individual">
+                <div class="class-parceiro">
+                    <div>
+                        <h2>formas de pagamento</h2>
+                        <img src="./logo/bandeiras-cartao/american.png" alt="american express">
+                        <img src="./logo/bandeiras-cartao/cielo.png" alt="cielo">
+                        <img src="./logo/bandeiras-cartao/disners.png" alt="diners club">
+                        <img src="./logo/bandeiras-cartao/elo.png" alt="elo">
+                        <img src="./logo/bandeiras-cartao/mastrcard.png" alt="mastercard">
+                        <img src="./logo/bandeiras-cartao/paypal.png" alt="paypal">
+                        <img src="./logo/bandeiras-cartao/pix.png" alt="pix">
+                        <img src="./logo/bandeiras-cartao/visa.png" alt="visa">
+                    </div>
+                    <div>
+                        <h2>Parceiros</h2>
+                        <a href="https://estacio.br" target="_blank" rel="noopener noreferrer"><img src="./logo/parceiros/estacio.png" alt="estacio"></a>
+                        <a href="https://fundesj.com.br" target="_blank" rel="noopener noreferrer"><img src="./logo/parceiros/fundesj.png" alt="fundesj"></a>
+                    </div>
+                </div>
                 <div>
-                <h2>formas de pagamento</h2>
-                <img src="./image/payment.webp" alt="logomarca">
-                <hr>
-                <p>CNPJ 09.569.483/0001-14. E-mail: sac.ecommerce@caomiapetshop.com.br. Imagens meramente ilustrativas.</p>
-                <p>Copyright © 2024 CãoMia Pet Shop – Todos os direitos reservados.</p>
+                    <hr>
+                    <div>
+                        <p>CNPJ 09.569.483/0001-14. E-mail: sac.ecommerce@caomiapetshop.com.br. Imagens meramente ilustrativas.</p>
+                        <p>Copyright © 2024 CãoMia Pet Shop – Todos os direitos reservados.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>    
+    <script src="./script/filter.produto.js"></script>
 </body>
 </html>
