@@ -11,6 +11,22 @@
     <header>
         <img src="./logo/logomarca.png" id="logo" alt="logomarca">
         <nav id="menu">
+
+            <button id="openModalBtn">Obter Desconto</button>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form id="discountForm" action="process_discount.php" method="POST">
+                        <label for="discountCode">Digite a senha:</label>
+                        <input type="text" id="discountCode" name="discountCode" required>
+                        <button type="submit">Aplicar</button>
+                    </form>
+                </div>
+            </div>
+
+            <script src="./script/filter.produto.js"></script>
+
             <input type="text" id="searchInput" placeholder="Buscar produtos" onkeyup="filterProducts()">
             <a class="navigation" href="./index.html">home</a>
             <a class="navigation" href="./produto.html">produtos</a>
@@ -18,10 +34,10 @@
             <a class="navigation" href="./sobre.html">sobre</a>
         </nav>
     </header>
-    <main>
-        <div class="titulo-produto">
-            <h1>nossos produtos</h1>
-        </div>                 
+    <main>        
+        <div class="titulo-produto">            
+            <h1>nossos produtos</h1>            
+        </div>
         <section class="grid-container-prod" id="container-produto">
             <article class="card">
                 <figure>
@@ -221,4 +237,17 @@
     </footer>
     <script src="./script/filter.produto.js"></script>
 </body>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $discountCode = $_POST['discountCode'];
+    
+    if ($discountCode == "CaoMia100") {
+        echo "Parabéns, você ganhou 25% de desconto nas compras online!";
+    } else {
+        echo "Senha inválida. Tente novamente.";
+    }
+}
+?>
+
 </html>
+

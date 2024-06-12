@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll(".img-efected");
 
     const observerOptions = {
-        root: null, // Use o viewport como root
+        root: null, // Usa o viewport como root
         rootMargin: "0px",
         threshold: 0.1 // A imagem precisa estar 10% visível para ativar a função
     };
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // Pare de observar a imagem depois que ela se torna visível
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -110,7 +110,7 @@ document.getElementById('contato-form').addEventListener('submit', function(even
     console.log('Pet:', pet);
     console.log('Raça:', raca);
     console.log('Sexo:', sexo.value);
-    //console.log('ID do Sexo:', sexo.id);
+    console.log('ID do Sexo:', sexo.id);
     console.log('Faixa Etária:', idadePet);
 });
 
@@ -125,3 +125,48 @@ function FormatarContato(input) {
     
     input.value = valor;
 }
+
+// FUNÇÃO PARA OBTER DESCONTO
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtém elementos
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("openModalBtn");
+    var span = document.getElementsByClassName("close")[0];
+    var form = document.getElementById("discountForm");
+
+    // Quando o usuário clica no botão, abre a modal
+    btn.onclick = function() {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden"; // Evita rolagem da página principal
+    }
+
+    // Quando o usuário clica no botão de fechar, fecha a modal
+    span.onclick = function() {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto"; // Permite rolagem da página principal
+    }
+
+    // Quando o usuário clica fora da modal, fecha a modal
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Permite rolagem da página principal
+        }
+    }
+
+    // Valida a senha e envia o formulário
+    form.onsubmit = function(event) {
+        event.preventDefault();
+        var discountCode = document.getElementById("discountCode").value;
+        
+        // Verifica se a senha é "CaoMia100"
+        if (discountCode === "CaoMia100") {
+            alert("Parabéns, você ganhou 25% de desconto nas compras online!");
+        } else {
+            alert("Senha inválida. Tente novamente.");
+        }
+        modal.style.display = "none";
+        document.body.style.overflow = "auto"; // Permite rolagem da página principal
+    }
+});
