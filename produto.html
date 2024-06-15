@@ -232,17 +232,5 @@
     </footer>
     <script src="./script/filter.produto.js"></script>
 </body>
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $discountCode = $_POST['discountCode'];
-    
-    if ($discountCode == "CaoMia100") {
-        echo "Parabéns, você ganhou 25% de desconto nas compras online!";
-    } else {
-        echo "Senha inválida. Tente novamente.";
-    }
-}
-?>
-
 </html>
 
